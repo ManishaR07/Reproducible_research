@@ -1,0 +1,19 @@
+---
+title: "Reproducible_research"
+author: "Manisha Rana"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+### We create a web page using R Markdown that features a map created with Leaflet and host our webpage on either GitHub Pages.Our webpage must contain the date that we created the document, and it must contain a map created with Leaflet.
+
+```{r}
+library(leaflet)
+my_map <- leaflet() %>% addTiles() %>%
+  addMarkers(lat=41.619549, lng=-93.598022, 
+             popup="My favorite city")
+my_map
+```
